@@ -17,6 +17,15 @@ for f in *.m4a; do ffmpeg -i "$f" -codec:v copy -codec:a libmp3lame -q:a 2 ./"${
 
 ## video (`gif`, `avi`, `mov`, `mp4`)
 
+- create `gif`
+```
+convert -delay 20 *.png pile.gif
+
+- change `gif` brightness contrast 
+```
+convert -brightness-contrast -20x10 pile.gif pile_darker.gif
+```
+
 - merge multiple `avi`
 ```
 cat SW1.avi SW2.avi > SW_all.avi
