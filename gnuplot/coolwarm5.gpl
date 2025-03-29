@@ -1,4 +1,4 @@
-set terminal pngcairo size 1000,100
+set terminal pngcairo size 800,20
 set output "coolwarm_palette.png"
 
 set margins 0,0,0,0  # Imposta tutti i margini a 0
