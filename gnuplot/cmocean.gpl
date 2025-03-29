@@ -1,0 +1,24 @@
+set terminal pngcairo size 800,20
+set output "cmocean.png"
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+set xrange [-1:1]
+set yrange [0:1]
+
+set palette defined (0 '#281A2C',1 '#3B315A',2 '#404C8B',3 '#3F6E97',4 '#488E9E',5 '#55AEA3',6 '#78CEA3',7 '#BBE6AC',8 '#FDFECC')
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+
+set view map
+set pm3d map
+splot x lt palette
