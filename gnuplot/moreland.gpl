@@ -1,0 +1,24 @@
+set terminal pngcairo size 800,20
+set output "moreland.png"
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+set xrange [-1:1]
+set yrange [0:1]
+
+set palette defined (0 '#3b4cc0',1 '#688aef',2 '#99baff',3 '#c9d8ef',4 '#edd1c2',5 '#f7a789',6 '#e36a53',7 '#e36a53',8 '#b40426')
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+
+set view map
+set pm3d map
+splot x lt palette
