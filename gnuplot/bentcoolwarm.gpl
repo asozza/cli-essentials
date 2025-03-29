@@ -1,0 +1,24 @@
+set terminal pngcairo size 800,20
+set output "bentcoolwarm.png"
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+set xrange [-1:1]
+set yrange [0:1]
+
+set palette defined (0 '#5548c1',1 '#7982d7',2 '#abb8e7',3 '#dde3ef',4 '#ead3c6',5 '#dba188',6 '#ca6b55',7 '#b10027')
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+
+set view map
+set pm3d map
+splot x lt palette
