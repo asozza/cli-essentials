@@ -1,5 +1,5 @@
 set terminal pngcairo size 800,20
-set output "default.png"
+set output "coolwarm.png"
 
 set palette defined (-1 'blue', -0.5 'web-blue', 0 'white', 0.5 'goldenrod', 1 'red')
 

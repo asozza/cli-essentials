@@ -1,5 +1,5 @@
 set terminal pngcairo size 800,20
-set output "dark.png"
+set output "saturated-coolwarm.png"
 
 set palette defined (-1 'navy', -0.75 'blue', -0.5 'cyan', -0.25 'light-blue', 0 'white', 0.25 'gold', 0.5 'orange', 0.75 'red', 1 'dark-red')
 

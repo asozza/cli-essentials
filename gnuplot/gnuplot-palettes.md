@@ -2,18 +2,26 @@
 # gnuplot palettes
 
 
-default palette
+coolwarm palette
 ```
 set palette defined (-1 'blue',-0.5 'web-blue',0 'white',0.5 'goldenrod',1 'red')
 ```
-![default palette](./palettes/default.png)
+![coolwarm palette](./palettes/coolwarm.png)
 
+---
 
-darkened-coolwarm palette
+saturated coolwarm palette
 ```
 set palette defined (-1 'navy', -0.75 'blue', -0.5 'cyan', -0.25 'light-blue', 0 'white', 0.25 'gold', 0.5 'orange', 0.75 'red', 1 'dark-red')
 ```
-![dark palette](./palettes/dark.png)
+![saturated coolwarm palette](./palettes/saturated-coolwarm.png)
+
+
+bent coolwarm palette
+```
+set palette defined (0 '#5548c1',1 '#7982d7',2 '#abb8e7',3 '#dde3ef',4 '#ead3c6',5 '#dba188',6 '#ca6b55',7 '#b10027')
+```
+![bent coolwarm palette](./palettes/bent-coolwarm.png)
 
 
 viridis palette
