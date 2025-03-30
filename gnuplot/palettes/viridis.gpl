@@ -1,15 +1,13 @@
 set terminal pngcairo size 800,20
 set output "viridis.png"
 
+set palette defined(1 '#440154',2 '#472c7a',3 '#3b518b',4 '#2c718e',5 '#27ad81',6 '#5cc863',7 '#aadc32',8 '#fde725')
+
 set margins 0,0,0,0
 set lmargin at screen 0
 set rmargin at screen 1
 set bmargin at screen 0
 set tmargin at screen 1
-
-set xrange [-1:1]
-set yrange [0:1]
-set palette defined(1 '#440154',2 '#472c7a',3 '#3b518b',4 '#2c718e',5 '#27ad81',6 '#5cc863',7 '#aadc32',8 '#fde725')
 
 unset key
 unset border
@@ -17,6 +15,8 @@ unset colorbox
 unset xtics
 unset ytics
 set cbra[-1:1]
+set xrange [-1:1]
+set yrange [0:1]
 
 set view map
 set pm3d map
