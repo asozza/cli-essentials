@@ -49,3 +49,10 @@ moreland palette
 set palette defined (0 '#3b4cc0',1 '#688aef',2 '#99baff',3 '#c9d8ef',4 '#edd1c2',5 '#f7a789',6 '#e36a53',7 '#e36a53',8 '#b40426')
 ```
 ![moreland palette](moreland.png)
+
+
+plasma palette
+```
+set palette defined (0 '#0c0887',1 '#4b03a1',2 '#7d03a8',3 '#a82296',4 '#cb4679',5 '#e56b5d',6 '#f89441',7 '#fdc328',8 '#f0f921')
+```
+![plasma palette](plasma.png)
