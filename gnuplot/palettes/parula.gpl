@@ -1,0 +1,23 @@
+set terminal pngcairo size 800,20
+set output "parula.png"
+
+set palette defined (0 '#352a87',1 '#0363e1',2 '#1485d4',3 '#06a7c6',4 '#38b99e',5 '#92bf73',6 '#d9ba56',7 '#fcce2e',8 '#f9fb0e')
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+set xrange [-1:1]
+set yrange [0:1]
+
+set view map
+set pm3d map
+splot x lt palette
