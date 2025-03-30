@@ -1,0 +1,23 @@
+set terminal pngcairo size 800,20
+set output "chroma.png"
+
+set palette defined (0 '#ffffe0',1 '#ffdfb8',2 '#ffbc94',3 '#ff9777',4 '#ff6962',5 '#ee4256',6 '#d21f47',7 '#b0062c',8 '#8b0000')
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+set xrange [-1:1]
+set yrange [0:1]
+
+set view map
+set pm3d map
+splot x lt palette

@@ -1,0 +1,23 @@
+set terminal pngcairo size 800,20
+set output "inferno.png"
+
+set palette defined (0 '#000004',1 '#1f0c48',2 '#550f6d',3 '#88226a',4 '#a83655',5 '#e35933',6 '#f9950a',7 '#f8c932',8 '#fcffa4')
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+set xrange [-1:1]
+set yrange [0:1]
+
+set view map
+set pm3d map
+splot x lt palette

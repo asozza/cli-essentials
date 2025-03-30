@@ -1,0 +1,23 @@
+set terminal pngcairo size 800,20
+set output "sand.png"
+
+set palette defined (0 '#604860',1 '#784860',2 '#a86060',3 '#c07860',4 '#f0a848',5 '#f8ca8c',6 '#feecae',7 '#fff4c2',8 '#fff7db',9 '#fffcf6')
+
+set margins 0,0,0,0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+set xrange [-1:1]
+set yrange [0:1]
+
+set view map
+set pm3d map
+splot x lt palette
