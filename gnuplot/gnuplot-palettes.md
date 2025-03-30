@@ -56,3 +56,9 @@ plasma palette
 set palette defined (0 '#0c0887',1 '#4b03a1',2 '#7d03a8',3 '#a82296',4 '#cb4679',5 '#e56b5d',6 '#f89441',7 '#fdc328',8 '#f0f921')
 ```
 ![plasma palette](./palettes/plasma.png)
+
+turbo palette
+```
+set palette defined(0 '#30123b',1 '#466be3',2 '#28bceb',3 '#32f298',4 '#a4fc3c',5 '#eecf3a',6 '#fb7e21',7 '#d02f05',8 '#7a0403') 
+```
+![turbo palette](./palettes/turbo.png)

@@ -1,0 +1,23 @@
+set terminal pngcairo size 800,20
+set output "turbo.png"
+
+set palette defined(0 '#30123b',1 '#466be3',2 '#28bceb',3 '#32f298',4 '#a4fc3c',5 '#eecf3a',6 '#fb7e21',7 '#d02f05',8 '#7a0403') 
+
+set margins 0,0,0,0  # Imposta tutti i margini a 0
+set lmargin at screen 0
+set rmargin at screen 1
+set bmargin at screen 0
+set tmargin at screen 1
+
+unset key
+unset border
+unset colorbox
+unset xtics
+unset ytics
+set cbra[-1:1]
+set xrange [-1:1]
+set yrange [0:1]
+
+set view map
+set pm3d map
+splot x lt palette
