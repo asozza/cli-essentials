@@ -26,6 +26,8 @@ burning iso
 sudo dd if=~/Downloads/some-distro.iso of=/dev/disk2 bs=1m
 ```
 
+---
+
 - create ssh keygen:
 generate the public and private key in folder `~/.ssh`
 ```
@@ -34,4 +36,20 @@ ssh-keygen
 copy public key to remote-host
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub <remote-host>
+```
+
+- per copiare/sincronizzare con un ssh jump
+```
+rsync -avz -e "ssh -J nome@jump_host" cartella_locale user@server:/percorso/remoto
+```
+
+---
+
+per decomprimere tar:
+```
+tar -xzf nome_tarball.20091009.tgz
+```
+per comprimere tar
+```
+tar -czvf nome_tarball.`date +%Y%m%d`.tgz file_o_cartella_da_archiviare1 file_o_cartella_da_archiviare2 ...
 ```
