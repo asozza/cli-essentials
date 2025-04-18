@@ -10,7 +10,6 @@ At the moment, it covers the following tasks:
 - [ ] `git`: basic commands, check status in multiple repositories
 - [ ] `gs`: ghostscript command for PDF manipulation
 - [ ] `gnuplot`: general commands and palettes
-- [ ] `tikz`: some sketches for figures and for project management
 
 In the process of extending the materials, 
 each folder should contains folders: `scripts` and `documentation`,
