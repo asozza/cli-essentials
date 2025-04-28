@@ -1,32 +1,38 @@
 #!/bin/bash
 
-# Check if a keyword is provided
+# Usage check
 if [[ -z "$1" ]]; then
-    echo "Usage: $0 <keyword>"
+    echo "Usage: $0 <keyword> [--force]"
     exit 1
 fi
 
 keyword=$1
+force=false
 
-# Find processes matching the keyword for the current user, excluding the grep command itself
-pids=$(ps -u $USER | grep "$keyword" | grep -v "grep" | awk '{print $2}')
+# Check for force flag
+if [[ "$2" == "--force" ]]; then
+    force=true
+fi
 
-# Exit if no processes are found
+# Find processes using pgrep
+pids=$(pgrep -u "$USER" -f "$keyword")
+
+# Exit if no processes found
 if [[ -z "$pids" ]]; then
     echo "No processes found matching '$keyword'."
     exit 0
 fi
 
-# Display the found processes
+# Show matching processes
 echo "Processes matching '$keyword':"
-ps -u $USER | grep "$keyword" | grep -v "grep"
+ps -fp "$pids"
 
-# Ask for user confirmation
-read -p "Do you want to terminate these processes? (y/n) " response
-
-if [[ "$response" == "y" ]]; then
-    echo "$pids" | xargs kill -9 2>/dev/null
-    echo "Processes terminated."
-else
-    echo "No action taken."
+# Confirmation (unless forced)
+if [[ "$force" == false ]]; then
+    read -p "Do you want to terminate these processes? (y/n) " response
+    [[ "$response" != "y" ]] && echo "No action taken." && exit 0
 fi
+
+# Kill processes
+echo "$pids" | xargs kill 2>/dev/null
+echo "Processes terminated."
