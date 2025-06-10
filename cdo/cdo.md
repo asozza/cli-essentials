@@ -1,6 +1,33 @@
 
 # cdo commands
 
+## averaging
+
+- weighted average using cell area or volume
+
+```
+# cat and select variable
+cdo cat *_T_* data.nc
+cdo selname,tos data.nc tos_monthly.nc
+
+# time mean (if needed)
+cdo yearmean tos_monthly.nc tos_yearly.nc
+
+# weights
+cdo selname,e1t ../../domain_cfg.nc tmp1.nc
+cdo selname,e2t ../../domain_cfg.nc tmp2.nc
+cdo mul tmp1.nc tmp2.nc tmp12.nc
+cdo chname,e2t,cell_area weights.nc
+
+# merge variable and weights
+cdo merge tos_monthly.nc weights.nc merged.nc
+
+# spatial average with weights
+cdo fldmean,weights=TRUE merged.nc output.nc
+```
+
+## handling grib files
+
 - convert grib with gaussian reduced grid (reduced_gg) to netcdf4 with regular grid:
 ```
 cdo -f nc setgridtype,regular ICMCLECE4 out.nc
