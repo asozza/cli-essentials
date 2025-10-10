@@ -20,3 +20,8 @@ plot for [n=1:100] sprintf("filename.%03.0f",n) u 2:3 w l
 ```
 pl [1:512][1:512] 'filename' binary array=512x512 format="%float" w image
 ```
+
+- plot binary particles:
+```
+pl 'part.000' binary record=NP:NP skip=4:0
+```

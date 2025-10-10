@@ -70,3 +70,9 @@ turbo palette
 set palette defined(0 '#30123b',1 '#466be3',2 '#28bceb',3 '#32f298',4 '#a4fc3c',5 '#eecf3a',6 '#fb7e21',7 '#d02f05',8 '#7a0403') 
 ```
 ![turbo palette](./palettes/turbo.png)
+
+sand palette
+```
+set palette defined (0 '#604860',1 '#784860',2 '#a86060',3 '#c07860',4 '#f0a848',5 '#f8ca8c',6 '#feecae',7 '#fff4c2',8 '#fff7db',9 '#fffcf6')
+```
+![sand palette](./palettes/sand.png)
