@@ -24,6 +24,11 @@ git status
 git branch
 ```
 
+- create new branch
+```
+git checkout -b <new-branch-name>
+```
+
 - switch branch
 ```
 git checkout <branch-name>
