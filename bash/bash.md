@@ -53,3 +53,21 @@ per comprimere tar
 ```
 tar -czvf nome_tarball.`date +%Y%m%d`.tgz file_o_cartella_da_archiviare1 file_o_cartella_da_archiviare2 ...
 ```
+
+---
+
+to see computer and host names on macOS
+
+```
+scutil --get ComputerName
+scutil --get HostName
+scutil --get LocalHostName
+```
+
+to change computer and host names on macOS
+```
+sudo scutil --set ComputerName "name"
+sudo scutil --set LocalHostName "name"
+```
+
+---
