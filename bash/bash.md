@@ -5,6 +5,11 @@
 ```
 find /some/directory -type f -name "*.txt" -delete
 ```
+or folders
+```
+find /some/directory -type d -name "*_files" -exec rm -r {} +
+```
+
 
 - cumulative sum:
 ```
